@@ -1,1 +1,8 @@
-/.claude/settings.local.json
+# 忽略所有文件
+*
+
+# 只保留玖菜-A股交易系统-MVP1.0.md
+!玖菜-A股交易系统-MVP1.0.md
+
+# 保留 .gitignore 本身
+!.gitignore
