@@ -1,0 +1,14 @@
+# 忽略所有文件
+*
+
+# 只保留玖菜-A股交易系统-MVP1.0.md
+!玖菜-A股交易系统-MVP1.0.md
+
+# 保留 README 文件
+!README.md
+
+# 保留电子书文件
+!盈利之路.md
+
+# 保留 .gitignore 本身
+!.gitignore
