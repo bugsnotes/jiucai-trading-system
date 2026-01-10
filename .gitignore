@@ -14,3 +14,5 @@
 # 保留每日复盘目录
 !每日复盘/
 !每日复盘/**
+/每日复盘/.claude/settings.local.json
+/每日复盘/.claude
