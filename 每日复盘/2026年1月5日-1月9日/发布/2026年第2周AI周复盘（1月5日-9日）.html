@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>2026年第2周AI周复盘（1月5日-9日）</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\zhangmingjiu\.cursor\extensions\shd101wyy.markdown-preview-enhanced-0.8.20-universal\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><html><head><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body></body></html>
+    </head>
+    <body for="html-export" >
+      <div class="crossnote markdown-preview  "  >
+      
+<h1 id="2026年第2周ai周复盘1月5日-9日">2026年第2周AI周复盘（1月5日-9日） </h1>
+<p><strong>复盘周期</strong>: 2026年1月5日（周一）- 1月9日（周五）<br>
+<strong>特别说明</strong>: 1月5日为元旦假期后首个交易日</p>
+<hr>
+<h2 id="一-周度核心数据">一、周度核心数据 </h2>
+<h3 id="账户变化">账户变化 </h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>周初(1/5开盘前)</th>
+<th>周末(1/9收盘)</th>
+<th>变化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>总资产</td>
+<td>~94,888元</td>
+<td>100,552元</td>
+<td><strong>+5,664元</strong></td>
+</tr>
+<tr>
+<td>周度收益率</td>
+<td>-</td>
+<td>-</td>
+<td><strong>+5.97%</strong> ✅</td>
+</tr>
+<tr>
+<td>累计盈亏</td>
+<td>-</td>
+<td>+5,704元</td>
+<td>5个交易日</td>
+</tr>
+</tbody>
+</table>
+<h3 id="每日盈亏明细">每日盈亏明细 </h3>
+<table>
+<thead>
+<tr>
+<th>日期</th>
+<th>总资产</th>
+<th>当日盈亏</th>
+<th>涨跌幅</th>
+<th>评分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1/5(一)</td>
+<td>96,487元</td>
+<td>+1,599元</td>
+<td>+1.69% ✅</td>
+<td>80分</td>
+</tr>
+<tr>
+<td>1/6(二)</td>
+<td>97,008元</td>
+<td>+524元</td>
+<td>+0.54% ✅</td>
+<td>35分 🚨</td>
+</tr>
+<tr>
+<td>1/7(三)</td>
+<td>99,939元</td>
+<td>+2,931元</td>
+<td>+3.07% ✅✅</td>
+<td>75分</td>
+</tr>
+<tr>
+<td>1/8(四)</td>
+<td>99,533元</td>
+<td>-392元</td>
+<td>-0.39% ⚠️</td>
+<td>25分 🚨🚨</td>
+</tr>
+<tr>
+<td>1/9(五)</td>
+<td>100,552元</td>
+<td>+1,043元</td>
+<td>+1.05% ✅</td>
+<td>55分</td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td>-</td>
+<td><strong>+5,705元</strong></td>
+<td><strong>+5.97%</strong></td>
+<td><strong>平均54分</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="仓位变化曲线">仓位变化曲线 </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>       总仓位%
+100% |
+ 90% |        ●85.44%(1/8)
+ 80% |  ●80.46%(1/6)
+ 70% |
+ 60% |────────────────── 60%上限
+ 50% |●46%(1/5)  ●51.26%(1/7)  ●60.85%(1/9)
+ 40% |
+     +----------------------------------
+       1/5    1/6    1/7    1/8    1/9
+</code></pre><h3 id="评分变化曲线">评分变化曲线 </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>100分 |
+ 80分 | ●80分(1/5)      ●75分(1/7)
+ 60分 |─────────────────────────●55分(1/9)──及格线
+ 40分 |   ●35分(1/6)
+ 20分 |            ●25分(1/8)
+     +----------------------------------
+       1/5    1/6    1/7    1/8    1/9
+</code></pre><hr>
+<h2 id="二-周度交易统计">二、周度交易统计 </h2>
+<h3 id="交易笔数统计">交易笔数统计 </h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>笔数</th>
+<th>涉及股票数</th>
+<th>金额(约)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>买入</td>
+<td>约25笔</td>
+<td>12只</td>
+<td>~150,000元</td>
+</tr>
+<tr>
+<td>卖出</td>
+<td>约30笔</td>
+<td>10只</td>
+<td>~160,000元</td>
+</tr>
+<tr>
+<td><strong>净卖出</strong></td>
+<td>-</td>
+<td>-</td>
+<td>~10,000元</td>
+</tr>
+</tbody>
+</table>
+<h3 id="清仓股票统计10只">清仓股票统计（10只） </h3>
+<table>
+<thead>
+<tr>
+<th>股票</th>
+<th>清仓日期</th>
+<th>盈亏</th>
+<th>操作评价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>中天火箭</td>
+<td>1/5</td>
+<td>+15%~17% ✅✅</td>
+<td>假期后止盈完美</td>
+</tr>
+<tr>
+<td>五洲新春</td>
+<td>1/5</td>
+<td>+9.97% ✅</td>
+<td>高开止盈正确</td>
+</tr>
+<tr>
+<td>日盈电子</td>
+<td>1/5</td>
+<td>+4.92% ✅</td>
+<td>及时止盈</td>
+</tr>
+<tr>
+<td>冠中生态</td>
+<td>1/7</td>
+<td>+12% ✅✅</td>
+<td>破MA5后清仓</td>
+</tr>
+<tr>
+<td>中国平安</td>
+<td>1/7</td>
+<td>+1.28% ✅</td>
+<td>仓位调整</td>
+</tr>
+<tr>
+<td>福赛科技</td>
+<td>1/7</td>
+<td>+6.53% ✅</td>
+<td>违规仓位清理</td>
+</tr>
+<tr>
+<td>斯菱智驱</td>
+<td>1/7</td>
+<td>+4.81% ✅</td>
+<td>违规仓位清理</td>
+</tr>
+<tr>
+<td>东方通信</td>
+<td>1/7</td>
+<td>+3.5% ✅</td>
+<td>止盈离场</td>
+</tr>
+<tr>
+<td>振华股份</td>
+<td>1/8</td>
+<td>-5% ❌</td>
+<td>条件单止损</td>
+</tr>
+<tr>
+<td>厦门钨业</td>
+<td>1/8</td>
+<td>微亏 ⚠️</td>
+<td>主动止损</td>
+</tr>
+<tr>
+<td>双星新材</td>
+<td>1/9</td>
+<td>微亏 ⚠️</td>
+<td>非体系股清仓</td>
+</tr>
+<tr>
+<td>先河环保</td>
+<td>1/9</td>
+<td>微利 ✅</td>
+<td>调仓释放资金</td>
+</tr>
+</tbody>
+</table>
+<p><strong>清仓胜率</strong>: 9胜3负 = <strong>75%</strong> ✅</p>
+<h3 id="当前持仓截至19收盘">当前持仓（截至1/9收盘） </h3>
+<table>
+<thead>
+<tr>
+<th>股票</th>
+<th>持仓</th>
+<th>成本</th>
+<th>现价</th>
+<th>盈亏</th>
+<th>占比</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>中国西电</td>
+<td>1000股</td>
+<td>10.491</td>
+<td>10.860</td>
+<td>+3.52%</td>
+<td>10.80%</td>
+<td>⚠️ 非体系</td>
+</tr>
+<tr>
+<td>恒立液压</td>
+<td>200股</td>
+<td>113.084</td>
+<td>115.200</td>
+<td>+1.87%</td>
+<td>22.91%</td>
+<td>⚠️ 超20%</td>
+</tr>
+<tr>
+<td>彤程新材</td>
+<td>100股</td>
+<td>56.605</td>
+<td>57.620</td>
+<td>+1.79%</td>
+<td>5.73%</td>
+<td>🆕</td>
+</tr>
+<tr>
+<td>永创智能</td>
+<td>700股</td>
+<td>14.791</td>
+<td>14.970</td>
+<td>+1.21%</td>
+<td>10.42%</td>
+<td>🆕</td>
+</tr>
+<tr>
+<td>唯特偶</td>
+<td>200股</td>
+<td>50.532</td>
+<td>55.260</td>
+<td>+9.36%</td>
+<td>10.99%</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="三-纪律执行分析">三、纪律执行分析 </h2>
+<h3 id="买入时段违规统计">买入时段违规统计 </h3>
+<table>
+<thead>
+<tr>
+<th>日期</th>
+<th>违规买入</th>
+<th>时段</th>
+<th>严重程度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1/5</td>
+<td>福赛科技</td>
+<td>9:35开盘混乱期</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>1/6</td>
+<td>中国平安</td>
+<td>9:31极严格时段</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>1/6</td>
+<td>东方通信</td>
+<td>9:33极严格时段</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>1/6</td>
+<td>斯菱智驱</td>
+<td>9:37严格时段</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>1/7</td>
+<td>振华股份</td>
+<td>14:17临近尾盘</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>1/7</td>
+<td>唯特偶</td>
+<td>14:34尾盘</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>1/8</td>
+<td>恒立液压</td>
+<td>14:15尾盘</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>1/9</td>
+<td>彤程新材</td>
+<td>9:31开盘混乱期</td>
+<td>⭐⭐⭐</td>
+</tr>
+</tbody>
+</table>
+<p><strong>结论</strong>: 买入时段纪律是本周最大问题，8次违规 🚨🚨🚨</p>
+<h3 id="止损执行统计">止损执行统计 </h3>
+<table>
+<thead>
+<tr>
+<th>日期</th>
+<th>股票</th>
+<th>止损原因</th>
+<th>执行情况</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1/6</td>
+<td>冠中生态</td>
+<td>破MA5</td>
+<td>❌ 未执行</td>
+</tr>
+<tr>
+<td>1/7</td>
+<td>冠中生态</td>
+<td>破MA5</td>
+<td>✅ 完美执行+12%</td>
+</tr>
+<tr>
+<td>1/7</td>
+<td>唯特偶</td>
+<td>破MA5</td>
+<td>⚠️ 做T后破MA5</td>
+</tr>
+<tr>
+<td>1/8</td>
+<td>振华股份</td>
+<td>-5%条件单</td>
+<td>✅ 完美执行</td>
+</tr>
+<tr>
+<td>1/8</td>
+<td>厦门钨业</td>
+<td>主动止损</td>
+<td>✅ 执行</td>
+</tr>
+</tbody>
+</table>
+<p><strong>止损执行率</strong>: 4/5 = <strong>80%</strong> ✅</p>
+<h3 id="仓位管理违规统计">仓位管理违规统计 </h3>
+<table>
+<thead>
+<tr>
+<th>日期</th>
+<th>总仓位</th>
+<th>单股超限</th>
+<th>持股超限</th>
+<th>评价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1/5</td>
+<td>46% ✅</td>
+<td>无</td>
+<td>3只 ✅</td>
+<td>合规</td>
+</tr>
+<tr>
+<td>1/6</td>
+<td>80% 🚨</td>
+<td>无</td>
+<td>6只 🚨</td>
+<td>严重违规</td>
+</tr>
+<tr>
+<td>1/7</td>
+<td>51% ✅</td>
+<td>无</td>
+<td>4只 ✅</td>
+<td>修正成功</td>
+</tr>
+<tr>
+<td>1/8</td>
+<td>85% 🚨</td>
+<td>恒立34% 🚨</td>
+<td>5只 ⚠️</td>
+<td>严重违规</td>
+</tr>
+<tr>
+<td>1/9</td>
+<td>61% ⚠️</td>
+<td>恒立23% ⚠️</td>
+<td>5只 ⚠️</td>
+<td>基本修正</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="四-成功经验总结">四、成功经验总结 </h2>
+<h3 id="1-假期后止盈策略完美执行-">1. 假期后止盈策略完美执行 ⭐⭐⭐⭐⭐ </h3>
+<p><strong>1月5日操作</strong>:</p>
+<ul>
+<li>中天火箭分批止盈 +15%~17%</li>
+<li>五洲新春高开止盈 +9.97%</li>
+<li>日盈电子及时止盈 +4.92%</li>
+</ul>
+<p><strong>核心启示</strong>:</p>
+<ul>
+<li>假期后连板股/涨停股优先兑现溢价</li>
+<li>集合竞价高开可能就是当天高点</li>
+<li>不要贪婪，及时锁定利润</li>
+</ul>
+<h3 id="2-破ma5止损变止盈-">2. 破MA5止损变止盈 ⭐⭐⭐⭐⭐ </h3>
+<p><strong>冠中生态案例</strong>:</p>
+<ul>
+<li>1/6收盘22.87元跌破MA5（23.14元）</li>
+<li>1/6未执行止损（错误）</li>
+<li>1/7高开+6.17%，分四笔清仓，均价25.00元</li>
+<li>最终盈利 +12%</li>
+</ul>
+<p><strong>核心启示</strong>:</p>
+<ul>
+<li>破MA5是趋势终结信号，必须执行</li>
+<li>破MA5后的反弹是最佳清仓机会</li>
+<li>纪律执行将止损变为止盈</li>
+</ul>
+<h3 id="3-仓位修正能力-">3. 仓位修正能力 ⭐⭐⭐⭐ </h3>
+<p><strong>两次修正</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>修正</th>
+<th>修正前</th>
+<th>修正后</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1/6→1/7</td>
+<td>80%→51%</td>
+<td>-29%</td>
+<td>✅✅</td>
+</tr>
+<tr>
+<td>1/8→1/9</td>
+<td>85%→61%</td>
+<td>-24%</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<p><strong>核心启示</strong>:</p>
+<ul>
+<li>发现问题后能及时修正</li>
+<li>修正后次日均实现盈利</li>
+<li>说明仓位管理是风险控制核心</li>
+</ul>
+<h3 id="4-清理违规持仓也能盈利-">4. 清理违规持仓也能盈利 ⭐⭐⭐⭐ </h3>
+<p><strong>1/7清理违规持仓</strong>:</p>
+<ul>
+<li>福赛科技：-1.64% → +6.53% ✅</li>
+<li>斯菱智驱：-1.05% → +4.81% ✅</li>
+</ul>
+<p><strong>核心启示</strong>:</p>
+<ul>
+<li>违规持仓也可能盈利</li>
+<li>但纪律仍需执行</li>
+<li>运气好不等于操作对</li>
+</ul>
+<hr>
+<h2 id="五-失败教训总结">五、失败教训总结 </h2>
+<h3 id="1-买入时段纪律完全失效-">1. 买入时段纪律完全失效 🚨🚨🚨 </h3>
+<p><strong>问题</strong>:</p>
+<ul>
+<li>本周8次买入时段违规</li>
+<li>涵盖9:30-9:35极严格时段、9:35-9:45严格时段、14:30尾盘禁止时段</li>
+<li>说明买入时段纪律完全没有执行</li>
+</ul>
+<p><strong>后果</strong>:</p>
+<ul>
+<li>部分违规买入盈利（运气好）</li>
+<li>部分违规买入亏损（斯菱智驱、振华股份）</li>
+<li>长期来看，违规必然导致亏损</li>
+</ul>
+<p><strong>改进方案</strong>:</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>【方案A：最严格】完全禁止9:30-9:45买入
+- 只在9:45-10:30买入
+- 最简单、最安全
+
+【方案B：分阶段检查】
+- 9:30-9:35：必须满足全部7个条件
+- 9:35-9:45：必须满足全部5个条件
+- 9:45-10:30：常规3个条件
+- 14:30-15:00：绝对禁止
+</code></pre><h3 id="2-仓位管理反复失控-">2. 仓位管理反复失控 🚨🚨🚨 </h3>
+<p><strong>问题</strong>:</p>
+<ul>
+<li>1/6仓位80%（修正后51%）</li>
+<li>1/8仓位85%（修正后61%）</li>
+<li>两次严重超标，说明仓位管理意识薄弱</li>
+</ul>
+<p><strong>原因分析</strong>:</p>
+<ul>
+<li>看到机会就想买入</li>
+<li>没有"卖了才能买"的意识</li>
+<li>对总仓位60%上限不够重视</li>
+</ul>
+<p><strong>改进方案</strong>:</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>【仓位管理铁律】
+1. 买入前必须计算总仓位
+2. 确认买入后总仓位≤60%
+3. 确认买入后持股≤4只（理想3只）
+4. 确认有足够现金储备≥40%
+5. 不符合要求，绝不买入
+6. 记住：卖了才能买
+</code></pre><h3 id="3-非体系建仓问题严重-️️️">3. 非体系建仓问题严重 ⚠️⚠️⚠️ </h3>
+<p><strong>违规建仓统计</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>日期</th>
+<th>股票</th>
+<th>违规类型</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1/6</td>
+<td>中国平安</td>
+<td>非自选股</td>
+<td>盈利+1.28%</td>
+</tr>
+<tr>
+<td>1/6</td>
+<td>东方通信</td>
+<td>非自选股</td>
+<td>盈利+3.5%</td>
+</tr>
+<tr>
+<td>1/6</td>
+<td>斯菱智驱</td>
+<td>非自选股+首仓17%超标</td>
+<td>盈利+4.81%</td>
+</tr>
+<tr>
+<td>1/7</td>
+<td>振华股份</td>
+<td>不符合建仓体系</td>
+<td>亏损-5%</td>
+</tr>
+<tr>
+<td>1/8</td>
+<td>中国西电</td>
+<td>非自选股</td>
+<td>持有中+3.52%</td>
+</tr>
+<tr>
+<td>1/8</td>
+<td>双星新材</td>
+<td>非自选股</td>
+<td>亏损清仓</td>
+</tr>
+<tr>
+<td>1/8</td>
+<td>恒立液压</td>
+<td>单股超20%+缺乏评估</td>
+<td>持有中+1.87%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>核心启示</strong>:</p>
+<ul>
+<li>必须100%按体系操作</li>
+<li>只买自选股池的票</li>
+<li>宁缺毋滥</li>
+</ul>
+<h3 id="4-评分大起大落说明纪律不稳定-️️">4. 评分大起大落说明纪律不稳定 ⚠️⚠️ </h3>
+<p><strong>评分变化</strong>:</p>
+<ul>
+<li>1/5: 80分 → 1/6: 35分（-45分）</li>
+<li>1/6: 35分 → 1/7: 75分（+40分）</li>
+<li>1/7: 75分 → 1/8: 25分（-50分）</li>
+<li>1/8: 25分 → 1/9: 55分（+30分）</li>
+</ul>
+<p><strong>问题</strong>:</p>
+<ul>
+<li>纪律执行不稳定</li>
+<li>好一天坏一天</li>
+<li>说明执行力需要加强</li>
+</ul>
+<hr>
+<h2 id="六-体系优化建议">六、体系优化建议 </h2>
+<h3 id="1-新增规则获利盘抛压评估">1. 新增规则：获利盘抛压评估 </h3>
+<p><strong>背景</strong>: 恒立液压"三阳包三阴"后买入，缺乏获利盘评估</p>
+<p><strong>新规则</strong>:</p>
+<ul>
+<li>买入前必须评估短期获利盘比例</li>
+<li>主力资金流向必须评估</li>
+<li>避免承接高位获利盘</li>
+</ul>
+<h3 id="2-强化规则买入时段检查">2. 强化规则：买入时段检查 </h3>
+<p><strong>建议</strong>: 采用方案A（完全禁止9:30-9:45买入）</p>
+<p><strong>理由</strong>:</p>
+<ul>
+<li>本周8次违规，说明分阶段检查无法执行</li>
+<li>完全禁止最简单、最安全</li>
+<li>9:45-10:30仍有充足买入时间</li>
+</ul>
+<h3 id="3-强化规则仓位管理">3. 强化规则：仓位管理 </h3>
+<p><strong>新增检查项</strong>:</p>
+<ul>
+<li>买入前必须计算总仓位</li>
+<li>总仓位&gt;50%时，禁止新建仓</li>
+<li>必须先卖后买</li>
+</ul>
+<h3 id="4-优化建议评分稳定性">4. 优化建议：评分稳定性 </h3>
+<p><strong>目标</strong>: 将日评分稳定在60-80分区间</p>
+<p><strong>措施</strong>:</p>
+<ul>
+<li>每日开盘前检查纪律清单</li>
+<li>每30分钟检查持仓状态</li>
+<li>违规后立即纠正，不留到次日</li>
+</ul>
+<hr>
+<h2 id="七-下周交易计划">七、下周交易计划 </h2>
+<h3 id="当前持仓管理5只">当前持仓管理（5只） </h3>
+<table>
+<thead>
+<tr>
+<th>股票</th>
+<th>计划</th>
+<th>优先级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>恒立液压</td>
+<td>继续减仓至20%以内</td>
+<td>1 🚨</td>
+</tr>
+<tr>
+<td>中国西电</td>
+<td>设好止损，评估去留</td>
+<td>2 ⚠️</td>
+</tr>
+<tr>
+<td>彤程新材</td>
+<td>严格止损止盈</td>
+<td>3</td>
+</tr>
+<tr>
+<td>永创智能</td>
+<td>严格止损止盈</td>
+<td>3</td>
+</tr>
+<tr>
+<td>唯特偶</td>
+<td>继续持有，目标+15%</td>
+<td>4 ✅</td>
+</tr>
+</tbody>
+</table>
+<h3 id="仓位目标">仓位目标 </h3>
+<ul>
+<li>总仓位：维持≤60%</li>
+<li>持股数量：择机减至3只</li>
+<li>现金储备：维持≥40%</li>
+<li>单股上限：≤20%</li>
+</ul>
+<h3 id="纪律重点">纪律重点 </h3>
+<ol>
+<li><strong>买入时段</strong>: 只在9:45-10:30买入</li>
+<li><strong>止损纪律</strong>: 破MA5立即清仓</li>
+<li><strong>仓位管理</strong>: 买入前必须检查总仓位</li>
+<li><strong>体系建仓</strong>: 只买自选股池的票</li>
+</ol>
+<hr>
+<h2 id="八-周度总结">八、周度总结 </h2>
+<h3 id="成绩单">成绩单 </h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>数值</th>
+<th>评价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>周度收益</td>
+<td>+5,664元</td>
+<td>✅✅</td>
+</tr>
+<tr>
+<td>周度收益率</td>
+<td>+5.97%</td>
+<td>✅✅</td>
+</tr>
+<tr>
+<td>清仓胜率</td>
+<td>75%</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>止损执行率</td>
+<td>80%</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>平均评分</td>
+<td>54分</td>
+<td>⚠️ 不及格</td>
+</tr>
+<tr>
+<td>买入时段违规</td>
+<td>8次</td>
+<td>🚨🚨🚨</td>
+</tr>
+<tr>
+<td>仓位超标</td>
+<td>2次</td>
+<td>🚨🚨</td>
+</tr>
+</tbody>
+</table>
+<h3 id="综合评价">综合评价 </h3>
+<p><strong>收益表现</strong>: ⭐⭐⭐⭐⭐ 优秀</p>
+<ul>
+<li>周度+5.97%，远超预期</li>
+<li>5个交易日4个盈利</li>
+<li>清仓胜率75%</li>
+</ul>
+<p><strong>纪律执行</strong>: ⭐⭐ 不合格</p>
+<ul>
+<li>买入时段违规8次</li>
+<li>仓位管理2次失控</li>
+<li>非体系建仓多次</li>
+<li>评分大起大落</li>
+</ul>
+<h3 id="核心结论">核心结论 </h3>
+<p><strong>"收益好不等于操作对"</strong></p>
+<p>本周虽然获得+5.97%的优秀收益，但纪律执行严重不足：</p>
+<ol>
+<li>买入时段纪律完全失效（8次违规）</li>
+<li>仓位管理两次失控（80%、85%）</li>
+<li>非体系建仓问题严重</li>
+<li>评分大起大落说明执行不稳定</li>
+</ol>
+<p><strong>运气好不是能力，长期来看违规必然导致亏损。</strong></p>
+<h3 id="下周目标">下周目标 </h3>
+<ol>
+<li>买入时段：零违规（只在9:45-10:30买入）</li>
+<li>仓位管理：总仓位≤60%，不再超标</li>
+<li>体系建仓：只买自选股池的票</li>
+<li>日评分：稳定在60分以上</li>
+<li>周评分：平均≥70分</li>
+</ol>
+<hr>
+<p><strong>复盘人</strong>: 玖菜量化 AI<br>
+<strong>复盘时间</strong>: 2026年1月10日<br>
+<strong>周度收益</strong>: +5,664元（+5.97%）✅✅<br>
+<strong>周度评分</strong>: 54分（不及格）⚠️<br>
+<strong>核心问题</strong>: 收益好但纪律差，必须改进</p>
+<p><strong>⚠️⚠️⚠️ 个人复盘记录用，不构成任何投资参考</strong></p>
+
+      </div>
+      
+      
+    </body>
+    
+    
+    
+    
+    
+  </html>
